@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Ajax</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Coffe Orders</h2>
+    <ul id="orders">
+        <template id="order-template">
+            <li data-id = "{{id}}">
+                <p>
+                    <strong>Name:</strong> 
+                    <span class="noedit name">{{name}}</span>
+                    <input class="edit name">
+                </p>
+                <p>
+                    <strong>Drink:</strong>
+                    <span class="noedit drink">{{drink}}</span>
+                    <input class="edit drink"> 
+                </p>
+                <button data-id='{{id}}' class='remove'>X</button>
+                <button class="editOrder noedit">Edit</button>
+                <button class="saveEdit edit">Save</button>
+                <button class="cancelEdit edit">Cancel</button>
+            </li>
+        </template>
+
+    </ul>
+    <h4>Add a coffe order</h4>
+    <p>
+        <strong>Name:</strong> 
+        <input type="text" name="name" id="name">
+    </p>
+    <p>
+        <strong>Drink :</strong> 
+        <input type="text" name="drink" id="drink">
+    </p>
+    <button id="add-order">Add!</button>
+    
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
